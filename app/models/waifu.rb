@@ -1,0 +1,2 @@
+class Waifu < ApplicationRecord
+end

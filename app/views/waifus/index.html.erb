@@ -1,0 +1,11 @@
+<h1> ESSA É SUA WAIFU LIST! </h1>
+
+<% @waifus.each do |waifu| %>
+    <div><%= waifu.name %></div>
+    <div><%= waifu.age %></div>
+    <div><%= waifu.anime %></div>
+    <div><%= waifu.description %></div>
+
+    <%= link_to 'EDITAR', edit_waifu_path(waifu) %>
+    <%= link_to 'DELETAR', waifu_path(waifu) %>
+<% end %>

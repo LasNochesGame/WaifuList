@@ -1,0 +1,5 @@
+    <div><%= @waifu.name %></div>
+    <div><%= @waifu.age %></div>
+    <div><%= @waifu.anime %></div>
+    <div><%= @waifu.description %></div>
+    <%= button_to 'Apagar', waifu_path(@waifu), method: :delete, data: { confirm: 'Você vai mesmo me deixar Mestre?' } %>

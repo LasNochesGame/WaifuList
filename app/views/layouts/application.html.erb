@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WaifuList</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    
+    <header>
+      <%= link_to 'INICIO', root_path %> -
+      <%= link_to 'ADICIONAR', new_waifu_path %> -
+      <%= link_to 'LISTA DE WAIFUS', waifus_path %>
+      <link rel="stylesheet" type="text/css" hfer="them.css">
+        <style>
+          h1 {color:red;}
+          p {color:purple;}
+          body {
+            background-color:#ffc0cb
+          }
+      </style>
+
+    </header>
+
+    <footer>
+      Criado por LasNochesDev -
+      <a href="https://www.facebook.com/rodrigo.lasnoches">Facebook</a>
+    </footer>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Las Noches TM">
+    <meta name="author" content="Rodrigo Las Noches">
+    <%= yield %>
+  </body>
+</html>

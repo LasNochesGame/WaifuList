@@ -1,0 +1,13 @@
+<%= form_for @waifu do |w| %>
+    <%= w.label :name, 'NAME:' %>
+    <%= w.text_field :name %>
+    <%= w.label :age, 'IDADE:' %>
+    <%= w.number_field :age %>
+    <%= w.label :anime, 'ANIME:' %>
+    <%= w.text_field :anime %>
+    <%= w.label :description, 'DESCRIÇÃO:' %>
+    <%= w.text_field :description %>
+    <%= w.label :main, 'PRINCIPAL:' %>
+    <%= w.check_box :main %>
+    <%= w.submit 'EDITAR' %>
+<% end %>
