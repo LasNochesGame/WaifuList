@@ -1,8 +1,12 @@
-<h1>♥ WAIFU LIST ♥</h1>
-<h3><p>Seja Ben Vindo Mestre!</p></h3>
+<div class="container pt-1 pb-3 text-center">
+<h1><strong>♥ WAIFU LIST ♥</strong></h1>
+<h3><p>Seja Bem-Vindo Mestre!</p></h3>
+</div>
 
+<div class="container text-center">
 <%= form_with url: search_path, method: :get do %>
     <%= label_tag :q, 'Busca:' %>
     <%= text_field_tag :q %>
     <%= submit_tag 'Encontrar' %>
 <% end %>
+</div>

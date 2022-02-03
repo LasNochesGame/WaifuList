@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="pt-br">
 <html>
   <head>
     <title>WaifuList</title>
@@ -6,35 +7,60 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Las Noches TM">
+    <meta name="author" content="Rodrigo Las Noches">
+
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
   </head>
 
   <body>
+
+  <style class="back">
+       body {
+              background: url(<%=asset_path 'Cerejera.png' %>);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              background-attachment: fixed;
+              height: 100%
+              margin: 0px;
+              background-color:#ffc0cb
+            }
+     </style>
+
+      <header>
+      
+        <div class="container-xxl pb-1 pt-1" style="background-color: #de3163">
+        <ul class="nav justify-content-end">
+        <%= link_to 'INICIO', root_path, :class => "btn btn-light" %> ||
+        <%= link_to 'ADICIONAR', new_waifu_path, :class => "btn btn-light" %> ||
+        <%= link_to 'LISTA DE WAIFUS', waifus_path, :class => "btn btn-light" %>
+        </ul>
+        </div>
+          <style>
+            h1 {color:red;}
+            p {color:purple;}
+        </style>  
+        
+      </header>
     
-    <header>
-      <%= link_to 'INICIO', root_path %> -
-      <%= link_to 'ADICIONAR', new_waifu_path %> -
-      <%= link_to 'LISTA DE WAIFUS', waifus_path %>
-      <link rel="stylesheet" type="text/css" hfer="them.css">
-        <style>
-          h1 {color:red;}
-          p {color:purple;}
-          body {
-            background-color:#ffc0cb
-          }
-      </style>
-
-    </header>
-
-    <footer>
-      Criado por LasNochesDev -
-      <a href="https://www.facebook.com/rodrigo.lasnoches">Facebook</a>
-    </footer>
-
-    <meta charset="UTF-8">
-    <meta name="description" content="Las Noches TM">
-    <meta name="author" content="Rodrigo Las Noches">
     <%= yield %>
+    
+    <div class="container">
+    <footer class="fixed-bottom">
+      Criado por LasNochesDev
+    </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
+
 </html>
