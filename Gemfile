@@ -45,6 +45,10 @@ gem  'bootstrap'
 
 gem  'jquery-rails'
 
+gem  "paperclip"
+
+gem 'sass-rails'
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"

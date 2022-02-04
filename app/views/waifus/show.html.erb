@@ -1,5 +1,14 @@
+<div class="container display-6 pb-3 pt-2 texter-center">
+RESULTADOS 
+</div>
+<div class="container-sm  pb-1 pt-1 border border-top-0 border-left-0 border-light rounded-3" style="background-color: #d8bfd8">
+
     <div><%= @waifu.name %></div>
     <div><%= @waifu.age %></div>
     <div><%= @waifu.anime %></div>
     <div><%= @waifu.description %></div>
-    <%= button_to 'Apagar', waifu_path(@waifu), method: :delete, :class => "btn btn-primary" %>
+    <%= link_to 'EDITAR', edit_waifu_path(@waifu), :class => "btn btn-outline-info" %>
+    <%= link_to 'DELETAR', waifu_path(@waifu), :class => "btn btn-outline-danger" %>
+    <br>
+
+</div>
