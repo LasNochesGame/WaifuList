@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
     
-    
   </head>
 
   <body>
@@ -40,6 +39,20 @@
       
         <div class="container-xxl pb-1 pt-1" style="background-color: #de3163">
         <ul class="nav justify-content-end">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          
+          <% if otaku_signed_in? %>
+
+            <!- <%= current_otaku.email %> ->
+            
+            <%= link_to 'SETTINGS', edit_otaku_registration_path, :class => "btn btn-light" %> ||
+            <%= link_to 'LOGOUT', destroy_otaku_session_path, :class => "btn btn-light",  data: { turbo_method: :delete } %> ||
+          <% else %>
+            <%= link_to 'REGISTRAR', new_otaku_registration_path, :class => "btn btn-light" %> ||
+            <%= link_to 'LOGIN', otaku_session_path, :class => "btn btn-light" %> ||
+          <% end %>
+        
         <%= link_to 'INICIO', root_path, :class => "btn btn-light" %> ||
         <%= link_to 'ADICIONAR', new_waifu_path, :class => "btn btn-light" %> ||
         <%= link_to 'LISTA DE WAIFUS', waifus_path, :class => "btn btn-light" %>
@@ -52,7 +65,7 @@
         
       </header>
 
-    
+      
     
     <%= yield %>
     

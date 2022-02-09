@@ -49,6 +49,9 @@ gem  "paperclip"
 
 gem 'sass-rails'
 
+gem 'devise'
+
+gem 'devise-i18n'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
