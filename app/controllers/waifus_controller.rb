@@ -3,7 +3,7 @@ class WaifusController < ApplicationController
     end
 
     def create
-        @waifu = Waifu.new(params.require(:waifu).permit(:name, :age, :anime, :description, :main))
+        @waifu = Waifu.new(params.require(:waifu).permit(:name, :age, :anime, :description, :main, :avatar))
         @waifu.save
         redirect_to root_path
     end
@@ -14,7 +14,7 @@ class WaifusController < ApplicationController
 
     def update
         @waifu = Waifu.find(params[:id])
-        @waifu.update(params.require(:waifu).permit(:name, :age, :anime, :description, :main))
+        @waifu.update(params.require(:waifu).permit(:name, :age, :anime, :description, :main, :avatar))
         redirect_to root_path
     end
 

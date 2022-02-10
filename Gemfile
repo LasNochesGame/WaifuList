@@ -53,6 +53,10 @@ gem 'devise'
 
 gem 'devise-i18n'
 
+gem 'image_processing'
+
+gem "aws-sdk-s3", require: false
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
